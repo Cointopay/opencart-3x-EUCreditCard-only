@@ -173,7 +173,7 @@ class ControllerExtensionPaymentCoinToPayFiatCC extends Controller
     {
         $merchantid = $this->config->get('payment_cointopay_fiat_cc_merchantID');
         $payment_cointopay_securitycode = $this->config->get('payment_cointopay_fiat_cc_securitycode');
-        $response = $this->c2pCurl('SecurityCode=' . $payment_cointopay_securitycode . '&MerchantID=' . $merchantid . '&Amount=' . $data['price'] . '&AltCoinID=' . $data['AltCoinID'] . '&inputCurrency=' . $data['currency'] . '&output=json&CustomerReferenceNr=' . $data['OrderID'] . '&returnurl=' . $this->url->link('extension/payment/cointopay_fiat/callback') . '&transactionconfirmurl=' . $this->url->link('extension/payment/cointopay_fiat_cc/callback') . '&transactionfailurl=' . $this->url->link('extension/payment/cointopay_fiat_cc/callback'), $data['key']);
+        $response = $this->c2pCurl('SecurityCode=' . $payment_cointopay_securitycode . '&MerchantID=' . $merchantid . '&Amount=' . $data['price'] . '&AltCoinID=' . $data['AltCoinID'] . '&inputCurrency=' . $data['currency'] . '&output=json&CustomerReferenceNr=' . $data['OrderID'] . '&returnurl=' . $this->url->link('extension/payment/cointopay_fiat_cc/callback') . '&transactionconfirmurl=' . $this->url->link('extension/payment/cointopay_fiat_cc/callback') . '&transactionfailurl=' . $this->url->link('extension/payment/cointopay_fiat_cc/callback'), $data['key']);
         return $response;
     }
 
