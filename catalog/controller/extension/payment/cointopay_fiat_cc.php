@@ -57,7 +57,7 @@ class ControllerExtensionPaymentCoinToPayFiatCC extends Controller
                 $this->load->language('extension/payment/cointopay_fiat_cc_invoice');
 
                 if ($php_arr->error == '' || empty($php_arr->error)) {
-                    $this->model_checkout_order->addOrderHistory($php_arr->CustomerReferenceNr, $this->config->get('payment_cointopay_fiat_cc_order_status_id'));
+                    $this->model_checkout_order->addOrderHistory($php_arr->CustomerReferenceNr, 2);
 
                     //print_r($php_arr);
 
